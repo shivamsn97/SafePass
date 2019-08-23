@@ -17,7 +17,7 @@ On android, download [Termux](https://play.google.com/store/apps/details?id=com.
 Then once it is installed, open it and type following commands to install SafePass:
 
 ```
-pkg install python
+pkg install python git
 git clone https://github.com/shivamsn97/SafePass 
 pip3 install SafePass/requirements.txt
 ```
