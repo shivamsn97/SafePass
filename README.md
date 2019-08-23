@@ -4,8 +4,8 @@ Before generating password for anything, make sure the password is unique by sea
 # HowTo
 Make sure you have python installed, 
 Do: 
-`git clone https://github.com/shivamsn97/SafePass`
-`cd SafePass`
-`pip3 install -r requirements.txt`
-`python3 safe.py`
+```git clone https://github.com/shivamsn97/SafePass
+cd SafePass
+pip3 install -r requirements.txt
+python3 safe.py```
 *Tip: On android, you can use Termux to run it.*
