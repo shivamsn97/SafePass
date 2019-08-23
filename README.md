@@ -12,4 +12,4 @@ pip3 install -r requirements.txt
 python3 safe.py
 ```
 
-*Tip: On android, you can use Termux to run it.*
+*Tip: On android, you can use [Termux](https://play.google.com/store/apps/details?id=com.termux) to run it.*
