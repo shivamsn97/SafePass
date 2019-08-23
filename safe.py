@@ -1,10 +1,12 @@
 from os import listdir
-from os.path import isfile, join
+from os.path import isfile, join, dirname, realpath
 from os import get_terminal_size
+from sys import argv
 from colorama import Fore, Back, Style 
 from helper import hide_cursor, show_cursor, print_title, file_len, clear
 
-data_path = 'PasswordDatas'
+data_path =  dirname(realpath(__file__)) + '/PasswordDatas'
+
 files = [f for f in listdir(data_path) if isfile(join(data_path, f))]
 
 def check_one ():
