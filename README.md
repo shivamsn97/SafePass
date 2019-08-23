@@ -1,7 +1,7 @@
 # SafePass
 Before generating password for anything, make sure the password is unique by searching it in tons of passwords stored by hackers in various Password Dictionaries availablr online. Also you can easily add Password Dictionaries from internet yourself, it is as easy as copy and pasting the file. Be safe from Bruteforce Attacks, and choose a safe password by first verifying it.
 
-## Installation
+## Installation and Running
 
 Make sure you have python and pip installed, 
 
@@ -11,5 +11,15 @@ cd SafePass
 pip3 install -r requirements.txt
 python3 safe.py
 ```
+## For Android
+On android, download [Termux](https://play.google.com/store/apps/details?id=com.termux) app from Google Play.
+Then once it is installed, open it and type following commands to install SafePass:
+```pkg install python  #Type Y if it asks. 
+git clone https://github.com/shivamsn97/SafePass 
+pip3 install SafePass/requirements.txt
+```
 
-*Tip: On android, you can use [Termux](https://play.google.com/store/apps/details?id=com.termux) to run it.*
+Now to run SafePass, open termux and type these commands:
+```cd SafePass
+python3 safe.py
+```
