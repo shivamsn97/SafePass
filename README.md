@@ -8,9 +8,8 @@ Make sure you have python and pip installed, To check python and pip installatio
 Then Do: 
 ```
 git clone https://github.com/shivamsn97/SafePass
-cd SafePass
-pip3 install -r requirements.txt
-python3 safe.py
+pip3 install -r SafePass/requirements.txt
+python3 SafePass
 ```
 ## For Android
 On android, download [Termux](https://play.google.com/store/apps/details?id=com.termux) app from Google Play.
@@ -24,8 +23,8 @@ pip3 install SafePass/requirements.txt
 
 Now to run SafePass, open termux and type these commands:
 
-```cd SafePass
-python3 safe.py
+```
+python3 SafePass
 ```
 
 # To add new Password Dictionaries
