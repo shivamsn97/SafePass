@@ -26,3 +26,10 @@ Now to run SafePass, open termux and type these commands:
 ```cd SafePass
 python3 safe.py
 ```
+
+#To add new Password Dictionaries
+
+Remember, Password Dictionary must be a text file with passwords seperated by NewLine Character.
+
+To add a new such file, just copy paste it in the *PasswordDatas* folder in the SafePass directory.
+Very soon, we will be adding a better implementation of importing new Password Dictionaries, but till then, this is the only way...

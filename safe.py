@@ -75,7 +75,8 @@ def check_one ():
 
 def check_file ():
 	system ('clear')
-	print ("in check file")
+	show_title ()
+	print("This thing is under Development.")
 
 def check_substr ():
 	system ('clear')
@@ -173,3 +174,5 @@ except Exception as e:
 	exit (1)
 
 show_cursor ()
+print (Fore.GREEN + "[+]" + Fore.WHITE + " Exiting. Hope you enjoyed")
+	
