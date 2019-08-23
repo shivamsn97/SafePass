@@ -6,7 +6,8 @@ Before generating password for anything, make sure the password is unique by sea
 Make sure you have python and pip installed, To check python and pip installation, run `python --version` and `pip --version` command in your terminal. 
 
 Then Do: 
-```git clone https://github.com/shivamsn97/SafePass
+```
+git clone https://github.com/shivamsn97/SafePass
 cd SafePass
 pip3 install -r requirements.txt
 python3 safe.py
