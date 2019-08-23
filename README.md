@@ -8,4 +8,5 @@ Do:
 cd SafePass
 pip3 install -r requirements.txt
 python3 safe.py```
+
 *Tip: On android, you can use Termux to run it.*
