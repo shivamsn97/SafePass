@@ -33,3 +33,5 @@ Remember, Password Dictionary must be a text file with passwords seperated by Ne
 
 To add a new such file, just copy paste it in the *PasswordDatas* folder in the SafePass directory.
 Very soon, we will be adding a better implementation of importing new Password Dictionaries, but till then, this is the only way...
+
+Also, we have provided additional password Dictionaries available under the *PasswordDatas/Other Password Lists (Unused)* Directory, and you can copy paste them in the *PasswordDatas* directory to use them, but remember the bigger and more the Dictionaries are, the more time it takes to search.
