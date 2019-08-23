@@ -1,35 +1,20 @@
 from os import listdir
 from os.path import isfile, join
-from os import system, get_terminal_size
+from os import get_terminal_size
 from colorama import Fore, Back, Style 
-from helper import hide_cursor, show_cursor
+from helper import hide_cursor, show_cursor, print_title, file_len, clear
 
 data_path = 'PasswordDatas'
 files = [f for f in listdir(data_path) if isfile(join(data_path, f))]
 
-
-def file_len(fname):
-    with open(fname, encoding = 'latin1') as f:
-        for i, l in enumerate(f):
-            pass
-    return i + 1
-
-def print_title ():
-	print (Back.BLACK)
-	system("clear")
-	print (Fore.GREEN + "\n\n\nPASSWORD CHECK TOOL by SHIVAM")
-	print (Fore.GREEN + "-----------------------------")
-	print (Fore.RED + "check if your passwords are vurneuable by a bruteforce attack.\n\n\n")
-
-
 def check_one ():
-	system ('clear')
+	clear ()
 	#print ("in check 1")
 	print_title ()
 	strx = input (Fore.GREEN + "Enter the password you want to check: " + Fore.RED + "\n(It is CASE SENSITIVE and SPACES will also be counted)\n\n"+Fore.WHITE+"#" + Fore.BLUE + "")
 	i = 0
 	(Found, File) = (False, None)
-	system ('clear')
+	clear ()
 	print_title ()
 	print (Fore.GREEN + "\nSearching for " + Fore.RED + strx + Fore.GREEN + " in Password Database.\n")
 	print(Fore.WHITE + "It may take Several Minutes. To interrupt, Press CTRL+C.\n\n")
@@ -74,17 +59,17 @@ def check_one ():
 	exit (0)
 
 def check_file ():
-	system ('clear')
-	show_title ()
+	clear ()
+	print_title ()
 	print("This thing is under Development.")
 
 def check_substr ():
-	system ('clear')
+	clear ()
 	print_title ()
 	strx = input (Fore.GREEN + "Enter the sub-string you want to search in Password Database: " + Fore.RED + "\n(It is CASE SENSITIVE and SPACES will also be counted)\n\n"+Fore.WHITE+"#" + Fore.BLUE + "")
 	i = 0
 	#(Found, File) = (False, None)
-	system ('clear')
+	clear ()
 	print_title ()
 	print (Fore.GREEN + "\nSearching for " + Fore.RED + strx + Fore.GREEN + " and its Sub-Strings in Password Database.\n")
 	print(Fore.WHITE + "It may take Several Minutes. To interrupt, Press CTRL+C.\n\n")
@@ -135,7 +120,7 @@ if len (files) is 0:
 	show_cursor ()
 	exit ()
 
-#hide_cursor ()
+
 print_title ()
 print (Fore.GREEN + "\nCHOOSE YOUR SAFE-CHECK:\n")
 print (Fore.BLUE + " 1. Check a Specific password in the database.\n 2. List Passwords containing a specified sub-string or word.\n 3. Check all Passwords present as list in a .txt file.\n\n\n")
@@ -154,7 +139,7 @@ while (True):
 
 
 if (choice == 0):
-	#system ("clear")
+	#clear ()
 	print (Fore.GREEN + "[+]" + Fore.WHITE + " Exiting. Hope you enjoyed")
 	show_cursor ()
 	exit()

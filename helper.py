@@ -1,5 +1,6 @@
 import sys
 import os
+from colorama import Fore, Back
 
 if os.name == 'nt':
     import msvcrt
@@ -30,3 +31,22 @@ def show_cursor():
     elif os.name == 'posix':
         sys.stdout.write("\033[?25h")
         sys.stdout.flush()
+
+def print_title ():
+	print (Back.BLACK)
+	clear ()
+	print (Fore.GREEN + "\n\n\nPASSWORD CHECK TOOL by SHIVAM")
+	print (Fore.GREEN + "-----------------------------")
+	print (Fore.RED + "check if your passwords are vurneuable by a bruteforce attack.\n\n\n")
+
+def file_len(fname):
+    with open(fname, encoding = 'latin1') as f:
+        for i, l in enumerate(f):
+            pass
+    return i + 1
+
+def clear ():
+	if os.name == 'nt':
+		os.system("cls")
+	elif os.name == 'posix':
+		os.system ("clear")
