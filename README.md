@@ -18,7 +18,7 @@ Then once it is installed, open it and type following commands to install SafePa
 ```
 pkg install python git
 git clone https://github.com/shivamsn97/SafePass 
-pip3 install SafePass/requirements.txt
+pip3 install -r SafePass/requirements.txt
 ```
 
 Now to run SafePass, open termux and type these commands:
