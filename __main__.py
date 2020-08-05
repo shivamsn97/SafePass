@@ -30,12 +30,12 @@ def check_one ():
 			if Found: 
 				break
 			file = open(data_path + '/' + x, 'r', encoding = 'latin1')
-			(c, r) = get_terminal_size (0)
+			(c, r) = get_terminal_size()
 			print (Back.CYAN + (c-1)*' ', end = '\r')
 				
 			for line in file:
 				line = line.strip ()
-				#(c, r) = get_terminal_size (0)
+				#(c, r) = get_terminal_size()
 				#print (Back.BLUE + (c-1)*' ', end = '\r')
 				i = i+1
 				zx = Back.CYAN + Fore.BLACK + "Checking " + Fore.MAGENTA + "{:>13}".format (line[:13]) + Fore.BLACK + " in file " + Fore.MAGENTA + "{:>25}  ".format ( x[:25] ) + Fore.RED + str((i*100)//total_pass) + "%"
@@ -45,7 +45,7 @@ def check_one ():
 					file.close ()
 					break
 			file.close ()
-		(c, r) = get_terminal_size (0)
+		(c, r) = get_terminal_size()
 		print (Back.BLACK + (c-1)*' ', end = '\r')
 		if Found:
 			print (Fore.RED + "Your password was available in the password database in file " + Fore.BLUE + File + Fore.RED + ". You should immediately change this password if u have used it somewhere.")
@@ -54,7 +54,7 @@ def check_one ():
 
 		print (Fore.GREEN + "\n\n[+]" + Fore.WHITE + " Script Succeded. Result was " + Fore.BLUE + ("Unsecure Password" if Found else "Secure Password") + Fore.WHITE)
 	except KeyboardInterrupt:
-		(c, r) = get_terminal_size (0)
+		(c, r) = get_terminal_size()
 		print (Back.BLACK + (c-1)*' ', end = '\r')
 		print (Fore.GREEN + "\n[+]" + Fore.WHITE + " Script Succeded. Result was " + Fore.BLUE + "Interrupted by User" + Fore.WHITE)
 	show_cursor ()
@@ -84,12 +84,12 @@ def check_substr ():
 
 		for x in files:
 			file = open(data_path + '/' + x, 'r', encoding= 'latin1')
-			(c, r) = get_terminal_size (0)
+			(c, r) = get_terminal_size()
 			print (Back.CYAN + (c-1)*' ', end = '\r')
 				
 			for line in file:
 				line = line.strip ()
-				#(c, r) = get_terminal_size (0)
+				#(c, r) = get_terminal_size()
 				#print (Back.BLUE + (c-1)*' ', end = '\r')
 				i = i+1
 				zx = Back.CYAN + Fore.BLACK + "Checking " + Fore.MAGENTA + "{:>13}".format (line[:13]) + Fore.BLACK + " in file " + Fore.MAGENTA + "{:>25}  ".format ( x[:25] ) + Fore.RED + str((i*100)//total_pass) + "%"
@@ -100,18 +100,18 @@ def check_substr ():
 					#l = line.find (strx)
 					lenx = len (strx)
 					linex = Fore.BLUE  + line[:l] + Fore.MAGENTA  + line [l:l+lenx] + Fore.BLUE  + line [lenx:]
-					(c, r) = get_terminal_size (0)
+					(c, r) = get_terminal_size()
 					print (Back.BLACK + (c-1)*' ', end = '\r')
 					print (Fore.WHITE  + "{:>6}: ".format (num) + " " + linex + " "  + Style.DIM + Fore.WHITE + " in " + Fore.BLUE  + x + Style.RESET_ALL)
-					(c, r) = get_terminal_size (0)
+					(c, r) = get_terminal_size()
 					print (Back.CYAN + (c-1)*' ', end = '\r')
 			file.close ()
-		(c, r) = get_terminal_size (0)
+		(c, r) = get_terminal_size()
 		print (Back.BLACK + (c-1)*' ', end = '\r')
 		
 		print (Fore.GREEN + "\n\n[+]" + Fore.WHITE + " Script Succeded. Result was " + Fore.BLUE + "{} result(s)".format (num) + Fore.WHITE)
 	except KeyboardInterrupt:
-		(c, r) = get_terminal_size (0)
+		(c, r) = get_terminal_size()
 		print (Back.BLACK + (c-1)*' ', end = '\r')
 		print (Fore.GREEN + "\n[+]" + Fore.WHITE + " Script Succeded. Result was " + Fore.BLUE + "Interrupted by User, {} results found.".format (num) + Fore.WHITE)
 	show_cursor ()
@@ -134,7 +134,7 @@ while (True):
 	try: 
 		choice = int (x)
 		if (choice > 3) or (choice < 0):
-			raise
+			raise Exception
 		break
 	except Exception as e:
 		print (Fore.RED + "[-]" + Fore.WHITE + " YOU MISSED SOMETHING, PLEASE TRY AGAIN...")
@@ -156,6 +156,7 @@ try:
 	if (choice == 3):
 		check_file ()
 except Exception as e:
+	#raise
 	print (Back.BLACK + Fore.RED + "[-] " + Fore.WHITE + str (e))
 	show_cursor ()
 	exit (1)
